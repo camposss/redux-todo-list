@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import { getItems } from "../actions/";
+import ListItem from './list_item';
 
 class List extends Component {
 
@@ -12,7 +13,7 @@ class List extends Component {
     render(){
         console.log('list props', this.props);
         const listItems= this.props.list.map((item,index)=>{
-           return <li className='list-group-item' key={index}>{item.title}</li>
+           return <ListItem key={index} {...item} />
         });
 
         return(
