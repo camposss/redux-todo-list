@@ -15,6 +15,7 @@
     "url": "https://github.com/camposss/redux-todo-list.git"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0-beta.3",
     "install": "^0.10.2",

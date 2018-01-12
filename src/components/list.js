@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+import { getItems } from "../actions/";
 
 class List extends Component {
+
+    componentDidMount(){
+        this.props.getItems();
+    }
+
     render(){
         console.log('list props', this.props);
         const listItems= this.props.list.map((item,index)=>{
@@ -27,6 +33,7 @@ class List extends Component {
 function mapStateToProps(state){
     return{
         list: state.todo.list
+
     }
 }
-export default connect(mapStateToProps)(List);
+export default connect(mapStateToProps, {getItems})(List);
