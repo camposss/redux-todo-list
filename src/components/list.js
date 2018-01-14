@@ -5,15 +5,15 @@ import { getItems } from "../actions/";
 import ListItem from './list_item';
 
 class List extends Component {
-
     componentDidMount(){
         this.props.getItems();
     }
 
+
     render(){
         console.log('list props', this.props);
         const listItems= this.props.list.map((item,index)=>{
-           return <ListItem key={index} {...item} />
+           return <ListItem index ={index} key={index} {...item} />
         });
 
         return(

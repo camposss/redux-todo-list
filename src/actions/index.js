@@ -27,6 +27,16 @@ export function getSingleItem(id){
     }
 }
 
+export function deleteItem (id){
+    const request= axios.delete(BASE_URL+ '/todos/'+id+ API_KEY);
+    return{
+        type: types.DELETE_ITEM,
+        payload: request
+    }
+}
+
+
+
 // const deleteUrl= 'http://api.reactprototypes.com/todos/'+id +API_KEY
 
 //toggle complete request below

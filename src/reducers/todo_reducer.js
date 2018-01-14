@@ -15,6 +15,9 @@ export default function (state=DEFAULT_STATE, action){
         case types.GET_SINGLE_ITEM:
             console.log('single item :', action);
             return {...state, single: action.payload.data.todo};
+        case types.DELETE_ITEM:
+            console.log('in todo reducer delete case', action);
+            return state;
         default:
             return state;
     }
