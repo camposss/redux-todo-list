@@ -18,6 +18,9 @@ export default function (state=DEFAULT_STATE, action){
         case types.DELETE_ITEM:
             console.log('in todo reducer delete case', action);
             return state;
+        case types.TOGGLE_ITEM:
+            console.log('in todo reducer toggle complete', action);
+            return state;
         default:
             return state;
     }
