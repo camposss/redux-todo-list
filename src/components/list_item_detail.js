@@ -19,7 +19,8 @@ class ListItemDetail extends Component {
                 <div className='row my-4 justify-content-end'>
                     <Link className='btn btn-outline-primary' to='/'> Home</Link>
                 </div>
-                <h1 className='text-center'>View Item : {this.props.todo.title}</h1>
+                <h1 className='text-center' contentEditable='true'> To Do: {this.props.todo.title}</h1>
+                <h3 contentEditable='true'>{this.props.todo.details}</h3>
             </div>
         )
     }
