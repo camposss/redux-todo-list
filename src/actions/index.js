@@ -34,6 +34,13 @@ export function deleteItem (id){
         payload: request
     }
 }
+export function toggleComplete (id){
+    const request= axios.put(BASE_URL+ '/todos/'+id+ API_KEY);
+    return{
+        type: types.TOGGLE_ITEM,
+        payload: request
+    }
+}
 
 
 
