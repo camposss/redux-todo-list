@@ -11,7 +11,6 @@ class List extends Component {
 
 
     render(){
-        console.log('list props', this.props);
         const listItems= this.props.list.map((item,index)=>{
            return <ListItem index ={index} key={index} {...item} />
         });
