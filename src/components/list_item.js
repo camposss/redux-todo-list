@@ -15,19 +15,14 @@ class ListItem extends Component{
 
     toggleComplete(id){
         const {toggleCompleted}= this.state;
-        console.log('you have completed this item', id);
         this.props.toggleComplete(id).then(()=>this.props.getItems());
 
     }
     handleDelete(id){
-        console.log('clicked on the delete button. handling delete function', id);
-        console.log('these are the props after clicking delete button', this.props);
         this.props.deleteItem(id).then(()=>this.props.getItems());
     }
 
     render(){
-        console.log('is it complete', this.props.complete);
-        console.log('updated props in list_item', this.props);
         return (
             <li className='list-group-item'>
                 <Link to={`/item/${this.props._id}`}>{this.props.title}</Link>

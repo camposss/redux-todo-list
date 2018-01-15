@@ -22,7 +22,6 @@ class ListItemDetail extends Component {
         })
     }
     render(){
-        console.log('list item detail props ', this.props);
 
         if(!this.props.todo) {
             return <h1>Loading for Sangwoo!</h1>
